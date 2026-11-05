@@ -195,3 +195,9 @@ details p { margin: 12px 0 0; color: #d0d0d5; }
 .prose { max-width: 760px; }
 .prose h1 { font-size: 2.6rem; }
 .prose h2 { font-size: 1.5rem; margin-top: 1.6em; }
+
+/* Apex plans */
+.plan h3 { margin-bottom: 0.2em; }
+.plan-price { font-family: var(--font-display), sans-serif; font-size: 2.4rem; line-height: 1.1; color: var(--red); margin-bottom: 0.5em; }
+.plan-price span { font-family: var(--font-body), sans-serif; font-size: 0.95rem; color: var(--muted); }
+.plan.featured { border-color: var(--red); box-shadow: 0 0 0 1px var(--red); }

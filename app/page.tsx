@@ -9,7 +9,7 @@ const offers = [
     img: "/images/gym-row.jpg",
     tag: "Launching now",
     title: "FitU Apex App",
-    text: "Join the founding cohort of the FitU Apex app and train alongside the first wave of members.",
+    text: "One daily Performance Score with AI coaching built on your own numbers. Start free and join the founding cohort.",
   },
   {
     href: "/elite",
