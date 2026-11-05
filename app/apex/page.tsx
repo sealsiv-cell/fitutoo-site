@@ -109,12 +109,14 @@ export default function Apex() {
 
       <section>
         <div className="wrap split">
-          <Image src="/images/body-types.jpg" alt="Endomorph, mesomorph and ectomorph body types" width={1400} height={845} />
+          <Image src="/images/body-shapes.jpg" alt="Six people of different body shapes, sizes and skin tones" width={1400} height={688} style={{ background: "#fff" }} />
           <div>
             <span className="eyebrow">Built on your numbers</span>
-            <h2>A plan for your body, not someone else&apos;s</h2>
-            <p className="lead">Your calorie and macro targets, meal plans and coaching all come from your own data.</p>
-            <p className="muted">Slower metabolism, easy gainer or hard gainer: Apex meets you where you are and tracks Day 1 versus today.</p>
+            <h2>
+              No set types. <span className="red">Just what fits you.</span>
+            </h2>
+            <p className="lead">Every body is different. Your calorie and macro targets, meal plans and coaching all come from your own data, not a category.</p>
+            <p className="muted">Apex meets you where you are today and tracks your progress from Day 1.</p>
           </div>
         </div>
       </section>
