@@ -16,13 +16,21 @@ Most of the things you'll want to change are in **`lib/site.ts`**:
 
 Page copy lives in `app/<page>/page.tsx`. Images are in `public/images`.
 
-## Connect the Google Sheet (signups)
+## Connect the Google Sheets (signups)
 
-Every form posts to `/api/signup`, which adds a row to a Google Sheet with these columns: timestamp, email, name, phone, goals, list, placement and page.
-The `list` column tells you which form the row came from: `apex-cohort`, `elite-application`, `elite-interest`, `academy` or `apparel`.
+Every form posts to `/api/signup`, which sends the signup to a Google Apps Script web app. The script adds a row to the right sheet:
 
-1. Create a Google Sheet, for example "FitU Signups".
-2. In the sheet, open **Extensions > Apps Script**, paste in `google-apps-script/Code.gs`, and click Save.
+| Form | Spreadsheet | Tab |
+|---|---|---|
+| Apex cohort (`apex-cohort`) | FitU Apex Cohort Signups | Cohort |
+| Academy, Apparel | FitU Apex Cohort Signups | Academy & Apparel |
+| VIP application (`elite-application`) | FitU VIP Training Applications | Applications |
+| VIP "send me the details" (`elite-interest`) | FitU VIP Training Applications | Interested |
+
+The spreadsheet IDs are already filled in at the top of `google-apps-script/Code.gs`.
+
+1. Go to [script.google.com](https://script.google.com) while signed in as the owner of both sheets. Click **New project** and name it "FitU signups".
+2. Paste in `google-apps-script/Code.gs` and click Save.
 3. Click **Deploy > New deployment**, choose **Web app**, set *Execute as* to **Me** and *Who has access* to **Anyone**, then click Deploy and approve the permissions.
 4. Copy the Web app URL.
 5. In Vercel, open **Project > Settings > Environment Variables** and add `GOOGLE_SHEET_WEBHOOK_URL` with that URL. Then redeploy.
