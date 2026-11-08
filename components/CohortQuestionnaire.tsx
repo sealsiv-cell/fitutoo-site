@@ -91,6 +91,15 @@ export default function CohortQuestionnaire() {
         </fieldset>
       ))}
 
+      <fieldset>
+        <legend>Anything else we should know? (optional)</legend>
+        <label>
+          Notes, comments, injuries or medical conditions
+          <textarea name="comments" rows={4} maxLength={1500} placeholder="For example: a past knee injury, high blood pressure, or anything you'd like your coach to know." />
+        </label>
+        <p className="small muted" style={{ margin: "10px 0 0" }}>Only the FitU coaching team sees this.</p>
+      </fieldset>
+
       <input name="company" type="text" tabIndex={-1} autoComplete="off" className="hp" aria-hidden="true" />
       <button type="submit" className="btn" disabled={status === "sending"}>
         {status === "sending" ? "Sending…" : "Submit my questionnaire"}

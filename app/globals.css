@@ -209,11 +209,11 @@ details p { margin: 12px 0 0; color: #d0d0d5; }
 .quiz legend .red { font-family: var(--font-display), sans-serif; margin-right: 6px; }
 .quiz label { display: flex; flex-direction: column; gap: 6px; font-size: 0.95rem; color: #d0d0d5; flex: 1 1 220px; margin-top: 12px; }
 .quiz-row { display: flex; flex-wrap: wrap; gap: 0 16px; }
-.quiz input:not([type=radio]), .quiz select {
+.quiz input:not([type=radio]), .quiz select, .quiz textarea {
   min-height: 48px; padding: 10px 12px; border-radius: var(--radius);
   border: 1px solid #3a3a40; background: #111114; color: var(--white); font: inherit;
 }
-.quiz input:focus, .quiz select:focus { outline: 2px solid var(--red); outline-offset: 1px; }
+.quiz input:focus, .quiz select:focus, .quiz textarea:focus { outline: 2px solid var(--red); outline-offset: 1px; }
 .choices { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; margin-top: 14px; }
 .quiz label.choice { flex-direction: row; align-items: center; gap: 12px; margin: 0; padding: 12px 14px; border: 1px solid #34343a; border-radius: var(--radius); cursor: pointer; color: var(--white); }
 .quiz label.choice:hover { border-color: #55555c; }

@@ -27,7 +27,7 @@ var VIP_SHEET_ID = "1O1eQmiWcHcVvBSlVgF9BXE2YjP0hupBVtx2hgSHHWnQ";
 // (used to find the next empty row), and the fields to write, in column order.
 var ROUTES = {
   "apex-cohort": { id: APEX_SHEET_ID, tab: "Cohort", emailCol: 2, fields: ["timestamp", "email", "name", "placement", "page"] },
-  "apex-questionnaire": { id: APEX_SHEET_ID, tab: "Questionnaire", emailCol: 4, fields: ["timestamp", "name", "lastName", "email", "city", "state", "job", "goal", "why", "time", "days", "activity", "status"] },
+  "apex-questionnaire": { id: APEX_SHEET_ID, tab: "Questionnaire", emailCol: 4, fields: ["timestamp", "name", "lastName", "email", "city", "state", "job", "goal", "why", "time", "days", "activity", "comments", "status"] },
   "academy": { id: APEX_SHEET_ID, tab: "Academy & Apparel", emailCol: 2, fields: ["timestamp", "email", "name", "list", "placement", "page"] },
   "apparel": { id: APEX_SHEET_ID, tab: "Academy & Apparel", emailCol: 2, fields: ["timestamp", "email", "name", "list", "placement", "page"] },
   "elite-application": { id: VIP_SHEET_ID, tab: "Applications", emailCol: 3, fields: ["timestamp", "name", "email", "phone", "goals", "placement", "status"] },

@@ -35,6 +35,7 @@ export async function POST(req: Request) {
     row.lastName = clip(body.lastName, 100);
     row.city = clip(body.city, 100);
     row.state = clip(body.state, 50);
+    row.comments = clip(body.comments, 1500);
     if (!row.name || !row.lastName || !row.city || !US_STATES.includes(row.state)) {
       return NextResponse.json({ error: "Please fill in your name, city and state." }, { status: 400 });
     }
