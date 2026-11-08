@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { cohortQuestions, US_STATES } from "@/lib/questionnaire";
 
 const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const clip = (v: unknown, n = 500) => (typeof v === "string" ? v.trim().slice(0, n) : "");
@@ -19,7 +20,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ error: "Please enter a valid email address." }, { status: 400 });
   }
 
-  const row = {
+  const row: Record<string, string> = {
     timestamp: new Date().toISOString(),
     email,
     name: clip(body.name, 100),
@@ -29,6 +30,22 @@ export async function POST(req: Request) {
     placement: clip(body.placement, 20),
     page: clip(body.page, 100),
   };
+
+  if (row.list === "apex-questionnaire") {
+    row.lastName = clip(body.lastName, 100);
+    row.city = clip(body.city, 100);
+    row.state = clip(body.state, 50);
+    if (!row.name || !row.lastName || !row.city || !US_STATES.includes(row.state)) {
+      return NextResponse.json({ error: "Please fill in your name, city and state." }, { status: 400 });
+    }
+    for (const q of cohortQuestions) {
+      const answer = clip(body[q.key], 200);
+      if (!q.options.includes(answer)) {
+        return NextResponse.json({ error: `Please answer: ${q.label}` }, { status: 400 });
+      }
+      row[q.key] = answer;
+    }
+  }
 
   const url = process.env.GOOGLE_SHEET_WEBHOOK_URL;
   if (!url) {

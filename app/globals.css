@@ -201,3 +201,23 @@ details p { margin: 12px 0 0; color: #d0d0d5; }
 .plan-price { font-family: var(--font-display), sans-serif; font-size: 2.4rem; line-height: 1.1; color: var(--red); margin-bottom: 0.5em; }
 .plan-price span { font-family: var(--font-body), sans-serif; font-size: 0.95rem; color: var(--muted); }
 .plan.featured { border-color: var(--red); box-shadow: 0 0 0 1px var(--red); }
+
+/* Cohort questionnaire */
+.quiz { display: flex; flex-direction: column; gap: 22px; margin-top: 28px; }
+.quiz fieldset { border: 1px solid var(--line); border-radius: 14px; background: var(--panel); padding: 22px; margin: 0; min-width: 0; }
+.quiz legend { font-weight: 600; font-size: 1.08rem; padding: 0 6px; }
+.quiz legend .red { font-family: var(--font-display), sans-serif; margin-right: 6px; }
+.quiz label { display: flex; flex-direction: column; gap: 6px; font-size: 0.95rem; color: #d0d0d5; flex: 1 1 220px; margin-top: 12px; }
+.quiz-row { display: flex; flex-wrap: wrap; gap: 0 16px; }
+.quiz input:not([type=radio]), .quiz select {
+  min-height: 48px; padding: 10px 12px; border-radius: var(--radius);
+  border: 1px solid #3a3a40; background: #111114; color: var(--white); font: inherit;
+}
+.quiz input:focus, .quiz select:focus { outline: 2px solid var(--red); outline-offset: 1px; }
+.choices { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 10px; margin-top: 14px; }
+.quiz label.choice { flex-direction: row; align-items: center; gap: 12px; margin: 0; padding: 12px 14px; border: 1px solid #34343a; border-radius: var(--radius); cursor: pointer; color: var(--white); }
+.quiz label.choice:hover { border-color: #55555c; }
+.quiz label.choice:has(input:checked) { border-color: var(--red); background: rgba(215, 20, 30, 0.12); }
+.quiz input[type=radio] { accent-color: var(--red); width: 18px; height: 18px; flex: none; }
+.quiz .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+.quiz .btn { align-self: flex-start; }

@@ -43,9 +43,15 @@ export default function SignupForm({ list, placement, cta = "Join now", variant 
     return (
       <div className="form-done" role="status">
         <strong>You&apos;re in.</strong>{" "}
-        {variant === "apply"
-          ? "We received your application and will reach out within 48 hours."
-          : "Check your inbox for next steps."}
+        {variant === "apply" ? (
+          "We received your application and will reach out within 48 hours."
+        ) : list === "apex-cohort" ? (
+          <>
+            Next step: <a href="/apex/questionnaire">fill out the 2-minute cohort questionnaire</a> to secure your spot.
+          </>
+        ) : (
+          "Check your inbox for next steps."
+        )}
       </div>
     );
   }

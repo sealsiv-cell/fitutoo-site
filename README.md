@@ -23,6 +23,7 @@ Every form posts to `/api/signup`, which sends the signup to a Google Apps Scrip
 | Form | Spreadsheet | Tab |
 |---|---|---|
 | Apex cohort (`apex-cohort`) | FitU Apex Cohort Signups | Cohort |
+| Cohort questionnaire (`/apex/questionnaire`) | FitU Apex Cohort Signups | Questionnaire |
 | Academy, Apparel | FitU Apex Cohort Signups | Academy & Apparel |
 | VIP application (`elite-application`) | FitU VIP Training Applications | Applications |
 | VIP "send me the details" (`elite-interest`) | FitU VIP Training Applications | Interested |
