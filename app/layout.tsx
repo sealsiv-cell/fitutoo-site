@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Oswald, Inter } from "next/font/google";
 import { Header, Footer } from "@/components/Chrome";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const display = Oswald({ subsets: ["latin"], weight: ["500", "700"], variable: "--font-display" });
@@ -22,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         <main>{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );
