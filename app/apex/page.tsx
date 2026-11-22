@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import Link from "next/link";
 import SignupForm from "@/components/SignupForm";
 import { SignupBand } from "@/components/Chrome";
 import { links } from "@/lib/site";
@@ -59,6 +60,9 @@ export default function Apex() {
             ) : (
               <SignupForm list="apex-cohort" placement="top" cta="Join the founding cohort" />
             )}
+            <p className="small" style={{ marginTop: 14 }}>
+              <Link href="/apex/cohort" className="red">Founding seats are open. See what&apos;s included →</Link>
+            </p>
           </div>
         </div>
       </section>

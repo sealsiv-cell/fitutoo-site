@@ -221,3 +221,18 @@ details p { margin: 12px 0 0; color: #d0d0d5; }
 .quiz input[type=radio] { accent-color: var(--red); width: 18px; height: 18px; flex: none; }
 .quiz .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
 .quiz .btn { align-self: flex-start; }
+
+/* Cohort sales page */
+.btn-lg { padding: 18px 34px; font-size: 1.2rem; }
+.buy-block { max-width: 560px; }
+.buy-block > p { margin: 10px 0 0; }
+.seat-meter { max-width: 420px; margin-bottom: 18px; }
+.seat-bar { height: 10px; border-radius: 999px; background: #2c2c31; overflow: hidden; }
+.seat-bar span { display: block; height: 100%; background: var(--red); }
+.seat-meter p { margin: 8px 0 0; }
+.facts { padding: 36px 0; background: var(--ink); border-bottom: 1px solid var(--line); }
+.facts .eyebrow { margin-bottom: 0.3rem; font-size: 0.78rem; }
+.fact { font-family: var(--font-display), sans-serif; font-size: 1.5rem; text-transform: uppercase; line-height: 1.15; margin: 0 0 4px; }
+.offer-box { border-color: var(--red); box-shadow: 0 0 0 1px var(--red); padding: 34px; }
+.offer-box .price { color: var(--red); }
+@media (max-width: 640px) { .facts .grid { grid-template-columns: 1fr 1fr; } }
