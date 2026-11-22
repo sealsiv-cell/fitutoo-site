@@ -16,7 +16,7 @@ Most of the things you'll want to change are in **`lib/site.ts`**:
 
 ### Cohort sales page (`/apex/cohort`, short link `/cohort`)
 
-Edit `cohort` in `lib/site.ts`: `seatPrice`, `compareAt`, `seatsTotal`, `seatsLeft`, `stripePaymentLink`, `startDate`, `length`, `enrollmentDeadline`. Anything left `null` shows "announced soon". While `stripePaymentLink` is `"#"`, every buy button is a "Reserve my seat" form that goes to the Cohort sheet. Once it's a real Stripe Payment Link, the buttons become "Buy my seat". In Stripe, set the link's **After payment** redirect to `https://fitutoo.com/apex/cohort/welcome`, which sends buyers to the survey. Set `seatsLeft` to `0` to switch to a waitlist. `cohortIncluded` is the "What's included" list (a draft to confirm), and `cohortTestimonials` stays hidden while empty.
+Edit `cohort` in `lib/site.ts`: `seatPrice`, `compareAt`, `seatsTotal`, `seatsLeft`, `stripePaymentLink`, `startDate`, `length`, `enrollmentDeadline`. Anything left `null` shows "announced soon". While `stripePaymentLink` is `"#"`, every buy button is a "Reserve my seat" form that goes to the Cohort sheet. Once it's a real Stripe Payment Link, the buttons become "Buy my seat". In Stripe, set the link's **After payment** redirect to `https://fitutoo.com/apex/cohort/welcome`, which sends buyers to the survey. Set `seatsLeft` to `0` to switch to a waitlist. `cohortIncluded` is the "What's included" list, and `cohortTestimonials` stays hidden while empty.
 
 Page copy lives in `app/<page>/page.tsx`. Images are in `public/images`.
 

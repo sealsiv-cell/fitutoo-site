@@ -47,13 +47,13 @@ export const nav = [
 // Anything left as null or "#" shows a "coming soon" placeholder on the page instead.
 export const cohort = {
   /** Price of one founding seat, e.g. "$197". null shows "Price announced soon". */
-  seatPrice: null as string | null,
+  seatPrice: "$297" as string | null,
   /** What the price compares to, e.g. "$297 after launch". null hides the line. */
-  compareAt: null as string | null,
+  compareAt: "Regular price $597" as string | null,
   /** Total founding seats, e.g. 50. null hides the seat counter. */
-  seatsTotal: null as number | null,
+  seatsTotal: 30 as number | null,
   /** Seats still open. Update by hand as seats sell. */
-  seatsLeft: null as number | null,
+  seatsLeft: 30 as number | null,
   /**
    * Stripe Payment Link for one seat (https://buy.stripe.com/...).
    * While it's "#", the buy buttons become "Reserve my seat" forms that go to the Cohort sheet.
@@ -61,20 +61,20 @@ export const cohort = {
    */
   stripePaymentLink: "#",
   /** e.g. "January 5, 2027". null shows "Start date announced soon". */
-  startDate: null as string | null,
+  startDate: "Monday, January 4, 2027" as string | null,
   /** e.g. "8 weeks". */
-  length: null as string | null,
+  length: "8 weeks" as string | null,
   /** Last day to buy a founding seat, e.g. "December 31, 2026". null hides it. */
-  enrollmentDeadline: null as string | null,
+  enrollmentDeadline: "December 31, 2026" as string | null,
 };
 
-// What a founding seat includes. DRAFT: confirm or edit each line before going live.
+// What a founding seat includes (confirmed by the owner 2026-11-22).
 export const cohortIncluded = [
   { icon: "🔓", title: "Early access to Apex", text: "Get into the app before public launch and set up your Performance Score from Day 1." },
   { icon: "⭐", title: "Pro+ for the whole cohort", text: "All five AI agents, analytics, meal plans, grocery lists and Shop at Kroger while the cohort runs." },
   { icon: "👥", title: "Private founding Pod", text: "A coach-led group of founding members who train, check in and push each other." },
-  { icon: "🎥", title: "Live group coaching", text: "Regular live calls to set targets, review progress and answer questions." },
-  { icon: "🤝", title: "1-on-1 kickoff session", text: "A video session with a coach to set your goals and build your first plan." },
+  { icon: "🎥", title: "Weekly live group coaching", text: "A live call every week to set targets, review progress and answer questions." },
+  { icon: "🤝", title: "1-on-1 kickoff session", text: "A 30-minute video session with a coach to set your goals and build your first plan." },
   { icon: "🏷️", title: "Founding member pricing", text: "Keep a founding rate on your plan after launch, for as long as you stay a member." },
   { icon: "🛠️", title: "Shape what we build", text: "Direct line to the team. Founding feedback decides what ships next." },
   { icon: "🏅", title: "Founding member badge", text: "Permanent recognition in the app as one of the first members of Apex." },

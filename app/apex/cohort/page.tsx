@@ -28,7 +28,7 @@ const faqs = [
     q: "What is the founding cohort?",
     a: "The first group of members to use FitU Apex, the elite performance platform. You get early access before public launch, coaching and a founding Pod, and your feedback shapes what we build next.",
   },
-  { q: "When does it start, and how long does it run?", a: `${start}. ${length}.` },
+  { q: "When does it start, and how long does it run?", a: cohort.startDate && cohort.length ? `It starts ${cohort.startDate} and runs ${cohort.length}.${cohort.enrollmentDeadline ? ` Enrollment closes ${cohort.enrollmentDeadline}, or sooner if seats sell out.` : ""}` : `${start}. ${length}.` },
   {
     q: "How many seats are there?",
     a: seatsKnown
@@ -38,6 +38,10 @@ const faqs = [
   {
     q: "How do I pay?",
     a: "Checkout is handled securely by Stripe. You can pay with a card, and you'll get a receipt by email.",
+  },
+  {
+    q: "What if it's not for me?",
+    a: "If you attend the 1-on-1 kickoff and aren't satisfied, ask for a full refund within 14 days of the cohort's start date and you'll get your money back.",
   },
   {
     q: "Why is there a survey?",
